@@ -14,6 +14,7 @@
   <meta property="og:site_name" content="llm.rb">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <script type="application/ld+json">
   {
@@ -68,7 +69,7 @@
 
   <div class="section">
     <h2>Quick Start</h2>
-    <pre><code>bundle add rails-llm
+    <pre><code class="language-shell">bundle add rails-llm
 rails generate rails_llm:install
 rails db:migrate</code></pre>
     <p>Set your API key and visit <code>http://localhost:3000/ai/agents</code>.</p>
@@ -88,7 +89,7 @@ rails db:migrate</code></pre>
 
   <div class="section">
     <h2>Example</h2>
-    <pre><code>class Agent < ApplicationRecord
+    <pre><code class="language-ruby">class Agent < ApplicationRecord
   acts_as_agent provider: :set_provider, context: :set_context
 
   private
@@ -126,5 +127,7 @@ agent.ask("Summarize this", with: "report.pdf").content</code></pre>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

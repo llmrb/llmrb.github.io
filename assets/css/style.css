@@ -279,7 +279,6 @@ nav .links a:hover { color: var(--color-accent); }
 }
 
 .section pre code {
-  color: #e5e5e5;
   background: none;
   padding: 0;
   border: none;
