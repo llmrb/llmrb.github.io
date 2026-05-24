@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>llm.rb — AI runtimes, tools, and applications</title>
+  <meta name="description" content="The llm.rb family of projects: Ruby and mruby AI runtimes, Rails integration, embedded AI applications, and self-hostable LLM web environments.">
+  <meta name="keywords" content="llm.rb, Ruby, mruby, Rails, AI, LLM, MCP, A2A, relay, robert, FreeBSD">
+  <meta name="author" content="llmrb">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="llm.rb — AI runtimes, tools, and applications">
+  <meta property="og:description" content="The llm.rb family of projects: Ruby and mruby AI runtimes, Rails integration, embedded AI applications, and self-hostable LLM web environments.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://llmrb.github.io/">
+  <meta property="og:site_name" content="llm.rb">
+  <meta property="og:image" content="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="llm.rb — AI runtimes, tools, and applications">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <span class="mark"></span>
+    llm.rb
+  </div>
+  <div class="links">
+    <a href="https://github.com/llmrb">GitHub</a>
+    <a href="https://0x1eef.github.io/x/llm.rb">API Docs</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <img src="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png"
+       alt="llm.rb" class="logo">
+  <h1>llm.rb</h1>
+  <p class="tagline">
+    A family of open-source AI runtimes, tools, and applications, all
+    built on Ruby and the 0BSD license.
+  </p>
+</div>
+
+<div class="container">
+  <div class="projects">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <img src="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png"
+               alt="llm.rb" style="width:36px;height:36px;border-radius:6px;">
+        </div>
+        <h2>llm.rb</h2>
+      </div>
+      <p>
+        Ruby's most capable AI runtime. One runtime for providers, agents,
+        tools, skills, MCP, A2A, streaming, and persistence. Supports
+        OpenAI, Anthropic, Google Gemini, DeepSeek, xAI, Ollama, and more.
+      </p>
+      <div class="tags">
+        <span class="tag">CRuby</span>
+        <span class="tag">MCP</span>
+        <span class="tag">A2A</span>
+        <span class="tag">Rails</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/llm.rb">GitHub</a>
+        <a href="https://llmrb.github.io/llm.rb/">Docs</a>
+        <a href="https://0x1eef.github.io/x/llm.rb">API</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon fallback">R</div>
+        <h2>robert</h2>
+      </div>
+      <p>
+        Artificial Intelligence packaged as a native, 2MB FreeBSD binary.
+        Built on mruby-llm. Ask questions about manual pages, search
+        documentation, and read files with tool confirmation.
+      </p>
+      <div class="tags">
+        <span class="tag">FreeBSD</span>
+        <span class="tag">Binary</span>
+        <span class="tag">CLI</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/robert">GitHub</a>
+        <a href="https://llmrb.github.io/robert">Docs</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon fallback">m</div>
+        <h2>mruby-llm</h2>
+      </div>
+      <p>
+        mruby's most capable AI runtime. A port of llm.rb to mruby that
+        can be embedded into small standalone applications. Supports the
+        same providers, tools, MCP, and A2A protocol.
+      </p>
+      <div class="tags">
+        <span class="tag">mruby</span>
+        <span class="tag">Embedded</span>
+        <span class="tag">MCP</span>
+        <span class="tag">A2A</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/mruby-llm">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon fallback">Rl</div>
+        <h2>rails-llm</h2>
+      </div>
+      <p>
+        Rails integration for llm.rb. Generators, an engine with
+        a stream-capable chat interface, and full access to the llm.rb
+        runtime from your Rails application.
+      </p>
+      <div class="tags">
+        <span class="tag">Rails</span>
+        <span class="tag">Engine</span>
+        <span class="tag">Generator</span>
+        <span class="tag">Chat</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/rails-llm">GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon fallback">Ry</div>
+        <h2>relay.app</h2>
+      </div>
+      <p>
+        A self-hostable, hackable LLM web environment built on llm.rb.
+        Extend with your own tools and skills. Supports MCP servers,
+        streaming, multi-turn conversations, and inline audio playback.
+      </p>
+      <div class="tags">
+        <span class="tag">Roda</span>
+        <span class="tag">Sequel</span>
+        <span class="tag">HTMX</span>
+        <span class="tag">MCP</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/relay">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      The <strong>llm.rb</strong> family shares a common foundation:
+      zero external dependencies by default, a single runtime for
+      providers and tools, and the permissive
+      <a href="https://choosealicense.com/licenses/0bsd/">0BSD license</a>.
+    </p>
+    <p>
+      <a href="https://github.com/llmrb/llm.rb">llm.rb</a> is the core
+      Ruby runtime. <a href="https://github.com/llmrb/rails-llm">rails-llm</a>
+      integrates it into Rails with generators and a chat engine.
+      <a href="https://github.com/llmrb/mruby-llm">mruby-llm</a> brings
+      the same architecture to embedded mruby environments.
+      <a href="https://github.com/llmrb/robert">robert</a> is a complete
+      FreeBSD AI assistant built on mruby-llm. And
+      <a href="https://github.com/llmrb/relay">relay.app</a> is a
+      full-featured web application that you can self-host and extend.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>License</h2>
+    <p>
+      All projects are distributed under the
+      <a href="https://choosealicense.com/licenses/0bsd/">BSD Zero Clause License</a>.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <a href="https://github.com/llmrb">llmrb</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/llmrb/llm.rb">llm.rb</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/llmrb/rails-llm">rails-llm</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/llmrb/mruby-llm">mruby-llm</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/llmrb/robert">robert</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/llmrb/relay">relay.app</a>
+    <p>0BSD license</p>
+  </div>
+</footer>
+
+</body>
+</html>
