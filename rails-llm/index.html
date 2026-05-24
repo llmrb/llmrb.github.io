@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rails-llm — Rails Integration for llm.rb with Chat Engine and Generators</title>
+  <meta name="description" content="rails-llm integrates the llm.rb AI runtime into Ruby on Rails. Includes generators, a stream-capable chat engine, acts_as_agent, and full access to llm.rb providers and tools.">
+  <meta name="keywords" content="rails-llm, Rails AI, Ruby on Rails LLM, Rails chat engine, llm.rb Rails, Rails AI agent">
+  <link rel="canonical" href="https://llmrb.github.io/rails-llm/">
+  <meta property="og:title" content="rails-llm — Rails Integration for llm.rb">
+  <meta property="og:description" content="Rails integration for the llm.rb AI runtime. Generators, a stream-capable chat engine, and acts_as_agent for your Rails app.">
+  <meta property="og:url" content="https://llmrb.github.io/rails-llm/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="llm.rb">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "rails-llm",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Linux, FreeBSD",
+    "description": "Rails integration for the llm.rb AI runtime. Includes generators, a stream-capable chat engine interface, and acts_as_agent for ActiveRecord models.",
+    "url": "https://github.com/llmrb/rails-llm",
+    "license": "https://choosealicense.com/licenses/0bsd/",
+    "programmingLanguage": "Ruby"
+  }
+  </script>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <span class="mark"></span>
+    <a href="../" style="color: inherit; text-decoration: none;">llm.rb</a>
+  </div>
+  <div class="links">
+    <a href="https://github.com/llmrb/rails-llm">GitHub</a>
+    <a href="../">Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero" style="padding-bottom: 24px;">
+    <img src="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png"
+         alt="rails-llm logo" class="logo">
+    <h1>rails-llm</h1>
+    <p class="tagline">
+      Rails integration for the llm.rb AI runtime.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      rails-llm integrates the <a href="../llm.rb/">llm.rb</a> AI runtime into
+      Ruby on Rails with generators for quick setup and an engine that provides
+      a stream-capable chat interface. Extend it with your own tools and skills.
+    </p>
+    <p>
+      Built on llm.rb's core runtime, rails-llm gives Rails applications access
+      to multi-provider LLM support, MCP, A2A, structured outputs, context
+      persistence, and all the tools and skills available in the llm.rb ecosystem.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Quick Start</h2>
+    <pre><code>bundle add rails-llm
+rails generate rails_llm:install
+rails db:migrate</code></pre>
+    <p>Set your API key and visit <code>http://localhost:3000/ai/agents</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Generators</strong> — Model, migration, initializer, and routes in one command</li>
+      <li><strong>Chat Engine</strong> — Stream-capable web interface at <code>/ai/agents</code></li>
+      <li><strong>acts_as_agent</strong> — Add LLM capabilities to any ActiveRecord model</li>
+      <li><strong>File Attachments</strong> — Pass documents directly to supported models</li>
+      <li><strong>Streaming</strong> — Real-time response streaming to the browser</li>
+      <li><strong>Full llm.rb Access</strong> — All providers, tools, MCP, and A2A available</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Example</h2>
+    <pre><code>class Agent < ApplicationRecord
+  acts_as_agent provider: :set_provider, context: :set_context
+
+  private
+
+  def set_provider
+    LLM.deepseek(key: ENV["DEEPSEEK_API_KEY"])
+  end
+
+  def set_context
+    {model: "deepseek-v4-flash"}
+  end
+end
+
+agent = Agent.create!
+agent.ask("What is the capital of France?").content
+agent.ask("Summarize this", with: "report.pdf").content</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://github.com/llmrb/rails-llm">GitHub Repository</a></li>
+      <li><a href="https://rubygems.org/gems/rails-llm">RubyGems</a></li>
+      <li><a href="../llm.rb/">llm.rb Runtime</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <a href="https://github.com/llmrb">llmrb</a>
+    &nbsp;&middot;&nbsp;
+    <a href="../">Home</a>
+    <p>0BSD license</p>
+  </div>
+</footer>
+
+</body>
+</html>
