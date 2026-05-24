@@ -229,6 +229,9 @@ nav .links a:hover { color: var(--color-accent); }
 
 .section {
   padding: 48px 0;
+}
+
+.section + .section {
   border-top: 1px solid var(--color-border);
 }
 
@@ -255,6 +258,7 @@ nav .links a:hover { color: var(--color-accent); }
 
 .section a:hover { color: var(--color-accent-hover); }
 
+/* Inline code */
 .section code {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -263,6 +267,52 @@ nav .links a:hover { color: var(--color-accent); }
   padding: 1px 5px;
   border: 1px solid var(--color-border);
   border-radius: 3px;
+}
+
+/* Block code */
+pre {
+  background: #0a0a0a;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+pre code {
+  color: #e5e5e5;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 13px;
+}
+
+/* Lists */
+.section ul {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.section li {
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.section li::before {
+  content: "-";
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+}
+
+.section li strong {
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 /* ==========================================================================
