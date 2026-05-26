@@ -235,17 +235,14 @@
       provider and a prompt is sent to the model through
       <code>ctx.talk</code>:
     </p>
-    <pre><code class="language-js">import createWasmLLM from "./dist/llm.js";
-
-const LLM = await createWasmLLM();
+    <pre><code class="language-js">
 const llm = LLM.deepseek({key: process.env.DEEPSEEK_SECRET});
 const ctx = new LLM.Context(llm, {
   model: "deepseek-chat",
   stream: process.stdout
 });
-
 await ctx.talk("Hello world");
-LLM.close();</code></pre>
+</code></pre>
 
     <h3>LLM.Agent</h3>
     <p>
@@ -255,17 +252,14 @@ LLM.close();</code></pre>
       such as a loop guard that detects repeated tool call patterns
       and advises the model to change course rather than raise an error:
     </p>
-    <pre><code class="language-js">import createWasmLLM from "./dist/llm.js";
-
-const LLM = await createWasmLLM();
+    <pre><code class="language-js">
 const llm = LLM.deepseek({key: process.env.DEEPSEEK_SECRET});
 const agent = new LLM.Agent(llm, {
   model: "deepseek-chat",
   stream: process.stdout
 });
-
 await agent.talk("Write one short sentence about WebAssembly.");
-LLM.close();</code></pre>
+</code></pre>
 
     <h3>Tools</h3>
     <p>
@@ -276,13 +270,9 @@ LLM.close();</code></pre>
       synchronous — <code>call()</code> must return a plain JSON-like
       value:
     </p>
-    <pre><code class="language-js">import createWasmLLM from "./dist/llm.js";
+    <pre><code class="language-js">
 import * as z from "zod";
-
-const LLM = await createWasmLLM();
-const llm = LLM.deepseek({key: process.env.DEEPSEEK_SECRET});
-
-const Echo = LLM.Tool({
+export const Echo = LLM.Tool({
   name: "echo",
   description: "Echo text back to the model",
   parameters: z.object({
@@ -292,15 +282,7 @@ const Echo = LLM.Tool({
     return {text};
   }
 });
-
-const agent = new LLM.Agent(llm, {
-  model: "deepseek-chat",
-  stream: process.stdout,
-  tools: [Echo]
-});
-
-await agent.talk("Call the echo tool with the text hello from wasm.");
-LLM.close();</code></pre>
+</code></pre>
   </div>
 
   <div class="section">
