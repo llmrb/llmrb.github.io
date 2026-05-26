@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>llm.rb — AI runtimes, tools, and applications for Ruby and mruby</title>
-  <meta name="description" content="The llm.rb family of open-source AI projects: a multi-provider Ruby AI runtime with MCP and A2A support, Rails integration, an embedded mruby runtime, a native FreeBSD AI binary, and a self-hostable LLM web environment.">
-  <meta name="keywords" content="llm.rb, Ruby, mruby, Rails, AI, LLM, MCP, A2A, relay, robert, FreeBSD, AI runtime, LLM runtime, Ruby AI">
+  <meta name="description" content="The llm.rb family of open-source AI projects: a multi-provider Ruby AI runtime with MCP and A2A support, Rails integration, an embedded mruby runtime, a native FreeBSD AI binary, a WASM browser runtime, and a self-hostable LLM web environment.">
+  <meta name="keywords" content="llm.rb, Ruby, mruby, Rails, AI, LLM, MCP, A2A, relay, robert, FreeBSD, AI runtime, LLM runtime, Ruby AI, wasm, WebAssembly">
   <meta name="author" content="llmrb">
   <link rel="canonical" href="https://llmrb.github.io/">
 
@@ -15,7 +15,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="llm.rb — AI runtimes, tools, and applications">
-  <meta property="og:description" content="The llm.rb family of projects: Ruby and mruby AI runtimes, Rails integration, embedded AI applications, and self-hostable LLM web environments.">
+  <meta property="og:description" content="The llm.rb family of projects: Ruby and mruby AI runtimes, Rails integration, embedded AI applications, WASM browser runtime, and self-hostable LLM web environments.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://llmrb.github.io/">
   <meta property="og:site_name" content="llm.rb">
@@ -26,7 +26,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="llm.rb — AI runtimes, tools, and applications">
-  <meta name="twitter:description" content="The llm.rb family of open-source AI projects: Ruby and mruby AI runtimes, Rails integration, embedded AI, and self-hostable LLM web apps.">
+  <meta name="twitter:description" content="The llm.rb family of open-source AI projects: Ruby and mruby AI runtimes, Rails integration, embedded AI, WASM browser runtime, and self-hostable LLM web apps.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png">
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -164,6 +164,30 @@
     </div>
 
     <div class="card">
+      <a href="wasm-llm/" class="card-link" aria-label="wasm-llm"></a>
+      <div class="card-header">
+        <img src="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png"
+             alt="wasm-llm browser AI runtime" class="card-icon" width="36" height="36">
+        <h2>wasm-llm</h2>
+      </div>
+      <p>
+        A browser- and edge-oriented LLM runtime compiled to WebAssembly.
+        Uses the same llm.rb runtime underneath, exposed through a
+        JavaScript API with tools, MCP HTTP, and streaming support.
+      </p>
+      <div class="tags">
+        <span class="tag">WASM</span>
+        <span class="tag">Browser</span>
+        <span class="tag">Edge</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/llmrb/wasm-llm">GitHub</a>
+        <a href="wasm-llm/">Docs</a>
+      </div>
+    </div>
+
+    <div class="card">
       <a href="rails-llm/" class="card-link" aria-label="rails-llm"></a>
       <div class="card-header">
         <img src="https://raw.githubusercontent.com/llmrb/llm.rb/main/llm-small.png"
@@ -227,6 +251,8 @@
       integrates it into Rails with generators and a chat engine.
       <a href="mruby-llm/">mruby-llm</a> brings
       the same architecture to embedded mruby environments.
+      <a href="wasm-llm/">wasm-llm</a> compiles it to WebAssembly
+      for browsers and edge runtimes.
       <a href="https://llmrb.github.io/robert/">robert</a> is a complete
       FreeBSD AI assistant built on mruby-llm. And
       <a href="relay/">relay.app</a> is a
@@ -235,8 +261,9 @@
     <p>
       Together, these projects provide a complete ecosystem for building
       AI-powered applications in Ruby — from embedded systems and CLI
-      tools to full-stack Rails applications, all backed by the same
-      proven runtime that supports every major LLM provider.
+      tools to full-stack Rails applications and browser-based
+      runtimes, all backed by the same proven runtime that supports
+      every major LLM provider.
     </p>
   </div>
 
@@ -259,6 +286,8 @@
     <a href="rails-llm/">rails-llm</a>
     &nbsp;&middot;&nbsp;
     <a href="mruby-llm/">mruby-llm</a>
+    &nbsp;&middot;&nbsp;
+    <a href="wasm-llm/">wasm-llm</a>
     &nbsp;&middot;&nbsp;
     <a href="https://llmrb.github.io/robert/">robert</a>
     &nbsp;&middot;&nbsp;
